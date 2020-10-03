@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import firebase from 'firebase';
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      speed: 10
+    };
+}
+
+componentDidMount() {
+const db = firebase.firestore();
+db.collection("Stars")
+.doc('Sun')
+.get()
+.then(doc => {
+  const data = doc.data();
+  this.setState({speed:data.name})
+});
+}
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className = "App"><h1>{this.state.speed}</h1></div>
   );
+  }
 }
 
 export default App;
