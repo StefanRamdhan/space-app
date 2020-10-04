@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  color: rgb(158, 161, 168);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url("https://github.com/StefanRamdhan/space-app/blob/main/public/background.png?raw=true");
 }
 
 .App-logo {
