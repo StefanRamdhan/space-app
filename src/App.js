@@ -113,6 +113,7 @@ render() {
 <h3 style={{paddingTop: 100}}>Time in years from the Earth to {this.state.star} using {this.state.propulsion} Propulsion for the entire journey: {this.state.time} years.</h3>
 <h4 style={{paddingTop: 25}}>Acceleration with {this.state.propulsion}: {this.state.acceleration} m/s^2.</h4>
 <h4 style={{paddingTop: 25}}>Distance from Earth to {this.state.star}: {this.state.au} Astronomical Units (AU).</h4>
+<p style={{paddingTop: 25}}>This calculation assumes unlimited fuel with negligable fuel weight, which is not feasible.</p>
 </div>
   );
   }
